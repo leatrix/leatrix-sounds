@@ -1,0 +1,22 @@
+9.0.11.alpha.51 - 8th December 2020
+- Source code is now on GitHub for the time being due to CurseForge SVN migration to Overwolf.
+
+9.0.10 - 25th November 2020
+- Maintenance update.
+
+9.0.08 - 18th November 2020
+- Updated for World of Warcraft 9.0.2.
+- Updated sound file and sound kit listing to game version 9.0.2.36665.
+
+9.0.06 - 11th November 2020
+- Updated sound file and sound kit listing to game version 9.0.1.36492.
+
+9.0.05 - 4th November 2020
+- The hotkey for replacing the currently selected track is now "E" (was SPACE) and the hotkey for stopping playback is now "Q" (was LCTRL).
+- When the chat editbox is activated (for instance when you shift/right-click a track), all hotkeys will be disabled until the chat editbox is deactivated.
+
+9.0.01 - 28th October 2020
+- Updated sound file and sound kit listing to game version 9.0.1.36372.
+
+9.0.00 - 12th October 2020
+- Updated for World of Warcraft patch 9.0 (Shadowlands).
