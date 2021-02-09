@@ -1,3 +1,6 @@
+9.0.15 - 9th February 2021
+- Updated sound file and sound kit listing to game version 9.0.2.37474.
+
 9.0.14 - 22nd January 2021
 - Updated sound file and sound kit listing to game version 9.0.2.37176.
 
