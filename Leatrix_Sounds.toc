@@ -1,9 +1,9 @@
-﻿## Interface: 90002
+﻿## Interface: 90005
 
 ## Title: Leatrix Sounds
 ## Notes: Massive collection of game sounds.
 
-## Version: 9.0.17
+## Version: 9.0.19
 ## Author: Leatrix
 ## SavedVariables: LeaSoundsDB
 
