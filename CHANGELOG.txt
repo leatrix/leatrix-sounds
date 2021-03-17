@@ -1,35 +1,38 @@
+9.0.20 - 17th March 2021
+- Updated sounds to game version 9.0.5.37899.
+
 9.0.19 - 10th March 2021
 - Updated for World of Warcraft 9.0.5.
-- Updated sound file and sound kit listing to game version 9.0.5.37864.
+- Updated sounds to game version 9.0.5.37864.
 
 9.0.15 - 9th February 2021
-- Updated sound file and sound kit listing to game version 9.0.2.37474.
+- Updated sounds to game version 9.0.2.37474.
 
 9.0.14 - 22nd January 2021
-- Updated sound file and sound kit listing to game version 9.0.2.37176.
+- Updated sounds to game version 9.0.2.37176.
 
 9.0.13 - 6th January 2021
-- Updated sound file and sound kit listing to game version 9.0.2.36949.
+- Updated sounds to game version 9.0.2.36949.
 
 9.0.12 - 18th December 2020
-- Updated sound file and sound kit listing to game version 9.0.2.36839.
+- Updated sounds to game version 9.0.2.36839.
 
 9.0.11 - 9th December 2020
 - Source code is now on GitHub (github.com/leatrix).
 
 9.0.08 - 18th November 2020
 - Updated for World of Warcraft 9.0.2.
-- Updated sound file and sound kit listing to game version 9.0.2.36665.
+- Updated sounds to game version 9.0.2.36665.
 
 9.0.06 - 11th November 2020
-- Updated sound file and sound kit listing to game version 9.0.1.36492.
+- Updated sounds to game version 9.0.1.36492.
 
 9.0.05 - 4th November 2020
 - The hotkey for replacing the currently selected track is now "E" (was SPACE) and the hotkey for stopping playback is now "Q" (was LCTRL).
 - When the chat editbox is activated (for instance when you shift/right-click a track), all hotkeys will be disabled until the chat editbox is deactivated.
 
 9.0.01 - 28th October 2020
-- Updated sound file and sound kit listing to game version 9.0.1.36372.
+- Updated sounds to game version 9.0.1.36372.
 
 9.0.00 - 12th October 2020
 - Updated for World of Warcraft patch 9.0 (Shadowlands).
