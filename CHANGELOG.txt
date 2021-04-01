@@ -1,3 +1,6 @@
+9.0.22 - 1st April 2021
+- Updated sounds to game version 9.0.5.38134.
+
 9.0.21 - 25th March 2021
 - Updated sounds to game version 9.0.5.37988.
 
