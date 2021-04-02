@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 9.0.22 (1st April 2021)
+	-- Leatrix Sounds 9.0.23.alpha.1 (2nd April 2021)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB, LeaDropList = {}, {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "9.0.22"
+	LeaSoundsLC["AddonVer"] = "9.0.23.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -19,16 +19,12 @@
 	-- Check Wow version is valid
 	do
 		local gameversion, gamebuild, gamedate, gametocversion = GetBuildInfo()
-		if gametocversion and gametocversion < 19999 then
+		if gametocversion and gametocversion < 90000 then
 			-- Game client is Wow Classic
 			C_Timer.After(2, function()
 				print(L["LEATRIX SOUNDS: WRONG VERSION INSTALLED!"])
 			end)
 			return
-		end
-		if gametocversion and gametocversion > 90000 then
-			LeaSoundsLC.SL = true
-			LeaSoundsLC.BackdropTemplate = "BackdropTemplate"
 		end
 	end
 
@@ -137,7 +133,7 @@
 		eb:SetScript("OnEnterPressed", eb.ClearFocus)
 
 		-- Add editbox border and backdrop
-		eb.f = CreateFrame("FRAME", nil, eb, LeaSoundsLC.BackdropTemplate)
+		eb.f = CreateFrame("FRAME", nil, eb, "BackdropTemplate")
 		eb.f:SetBackdrop({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = false, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
 		eb.f:SetPoint("LEFT", -6, 0)
 		eb.f:SetWidth(eb:GetWidth()+6)
@@ -282,7 +278,7 @@
 		dbtn:SetScript("OnLeave", GameTooltip_Hide)
 
 		-- Create dropdown list
-		local ddlist =  CreateFrame("Frame", nil, frame, LeaSoundsLC.BackdropTemplate)
+		local ddlist =  CreateFrame("Frame", nil, frame, "BackdropTemplate")
 		LeaSoundsCB["ListFrame"..ddname] = ddlist
 		ddlist:SetPoint("TOP",0, -42)
 		ddlist:SetWidth(frame:GetWidth())
