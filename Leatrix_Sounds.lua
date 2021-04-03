@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 9.0.23.alpha.1 (2nd April 2021)
+	-- Leatrix Sounds 9.0.23.alpha.2 (3rd April 2021)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB, LeaDropList = {}, {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "9.0.23.alpha.1"
+	LeaSoundsLC["AddonVer"] = "9.0.23.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -878,6 +878,9 @@
 
 		PageF:EnableKeyboard(true)
 		PageF:SetScript("OnKeyUp", function(self, key) 
+
+			-- Do nothing if CTRL,SHIFT or ALT is down
+			if IsModifierKeyDown() then return end
 
 			-- Close addon panel key
 			if key == "ESCAPE" then
