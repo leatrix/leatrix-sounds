@@ -1,5 +1,6 @@
-9.0.23.alpha.3 - 19th April 2021
+9.0.23.alpha.4 - 19th April 2021
 - If dialog sound is disabled, it will now only be enabled if you play a sound kit.  Playing a sound file will not enable dialog sound if it's disabled.
+- The source file versions (ListFile, SoundKit, SoundKitName) are now shown in the help button tooltip.
 
 9.0.22 - 1st April 2021
 - Updated sounds to game version 9.0.5.38134.
