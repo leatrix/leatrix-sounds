@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 9.0.23.alpha.2 (3rd April 2021)
+	-- Leatrix Sounds 9.0.23.alpha.3 (19th April 2021)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB, LeaDropList = {}, {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "9.0.23.alpha.2"
+	LeaSoundsLC["AddonVer"] = "9.0.23.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -769,10 +769,6 @@
 						end
 						-- Enable sound if required
 						if GetCVar("Sound_EnableAllSound") == "0" then SetCVar("Sound_EnableAllSound", "1") end
-						-- Enable dialog sounds if required
-						if GetCVar("Sound_EnableDialog") == "0" then SetCVar("Sound_EnableDialog", "1") end
-						-- Set dialog sound to maximum if required
-						if GetCVar("Sound_DialogVolume") ~= "1" then SetCVar("Sound_DialogVolume", "1") end
 						-- Disable music if it's currently enabled
 						if GetCVar("Sound_EnableMusic") == "1" then	SetCVar("Sound_EnableMusic", "0") end
 						-- Enable the stop button
@@ -784,8 +780,14 @@
 						-- Play track
 						local file, soundID = item:match("([^,]+)%#([^,]+)")
 						if strfind(file, ".mp3") or strfind(file, ".ogg") then
+							-- Play sound file
 							void, musicHandle = PlaySoundFile(soundID, "Master")
 						else
+							-- Enable dialog sounds if required
+							if GetCVar("Sound_EnableDialog") == "0" then SetCVar("Sound_EnableDialog", "1") end
+							-- Set dialog sound to maximum if required
+							if GetCVar("Sound_DialogVolume") ~= "1" then SetCVar("Sound_DialogVolume", "1") end
+							-- Play sound kit
 							void, musicHandle = PlaySound(soundID, "Master", false, true)
 						end
 						-- Remember scroll frame position
@@ -1061,6 +1063,11 @@
 		maintitle:SetFont(maintitle:GetFont(), 72)
 		maintitle:ClearAllPoints()
 		maintitle:SetPoint("TOP", 0, -72)
+
+		local expTitle = LeaSoundsLC:MakeTx(interPanel, "Shadowlands", 0, 0)
+		expTitle:SetFont(expTitle:GetFont(), 32)
+		expTitle:ClearAllPoints()
+		expTitle:SetPoint("TOP", 0, -152)
 
 		local subTitle = LeaSoundsLC:MakeTx(interPanel, "curseforge.com/wow/addons/leatrix-sounds", 0, 0)
 		subTitle:SetFont(subTitle:GetFont(), 20)
