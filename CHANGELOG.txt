@@ -1,3 +1,6 @@
+9.0.27 - 4th May 2021
+- Added a niche ability to search Leatrix_Sounds_Files.lua or Leatrix_Sounds_Kits.lua for multiple sound file IDs or sound kit IDs using Notepad++.  To use it, hold control, shift and right-click a few sound files or sound kits in LTS (one or the other, not both).  You will get a search pattern in the chat editbox that you can paste into a Notepad++ regular expression search (use Search > Mark with Bookmark line checked so that you can do Search > Bookmark > Copy Bookmarked Lines afterwards).
+
 9.0.25 - 21st April 2021
 - If dialog sound is disabled, it will now only be enabled if you play a sound kit.  Playing a sound file will no longer enable dialog sound if it's disabled.
 - The source file versions (ListFile, SoundKit, SoundKitName) are now shown in the help button tooltip.

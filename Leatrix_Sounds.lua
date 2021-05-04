@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 9.0.25 (21st April 2021)
+	-- Leatrix Sounds 9.0.27 (4th May 2021)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB, LeaDropList = {}, {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "9.0.25"
+	LeaSoundsLC["AddonVer"] = "9.0.27"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -804,6 +804,24 @@
 						end
 					end
 				elseif btn == "RightButton" then
+					-- Build sound ID search criteria in editbox
+					if IsShiftKeyDown() and IsControlKeyDown() then
+						local item = self:GetText()
+						-- Do nothing if its a blank line or informational heading
+						if not item or strfind(item, "|c") then return end
+						if strfind(item, "#") then
+							local file, soundID = item:match("([^,]+)%#([^,]+)")
+							local eBox = ChatEdit_ChooseBoxForSend()
+							ChatEdit_ActivateChat(eBox)
+							eBox:SetCursorPosition(strlen(eBox:GetText()) - 1)
+							if eBox:GetText() == "" or not strfind(eBox:GetText(), "|;") then
+								eBox:SetText("#" .. soundID .. "\"|;")
+							else
+								eBox:Insert("#" .. soundID .. "\"|")
+							end
+						end
+						return
+					end
 					-- Print track name in editbox
 					if IsShiftKeyDown() and not IsControlKeyDown() then
 						-- Remove focus from search box
@@ -819,6 +837,7 @@
 							eBox:SetText(item)
 							eBox:HighlightText()
 						end
+						return
 					end
 					-- Print wow.tools link in editbox
 					if IsControlKeyDown() and not IsShiftKeyDown() then
@@ -840,6 +859,7 @@
 							end
 							eBox:HighlightText()
 						end
+						return
 					end
 				end
 			end)
