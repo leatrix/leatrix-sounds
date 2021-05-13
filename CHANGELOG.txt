@@ -1,3 +1,6 @@
+9.0.28 - 13th May 2021
+- Updated sounds to game version 9.0.5.38556.
+
 9.0.27 - 4th May 2021
 - Added a niche ability to search Leatrix_Sounds_Files.lua or Leatrix_Sounds_Kits.lua for multiple sound file IDs or sound kit IDs using Notepad++.  To use it, hold control, shift and right-click a few sound files or sound kits in LTS (one or the other, not both).  You will get a search pattern in the chat editbox that you can paste into a Notepad++ regular expression search (use Search > Mark with Bookmark line checked so that you can do Search > Bookmark > Copy Bookmarked Lines afterwards).
 
