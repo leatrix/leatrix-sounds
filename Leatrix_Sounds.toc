@@ -1,0 +1,17 @@
+﻿## Interface: 110005
+
+## Title: Leatrix Sounds
+## Notes: Massive collection of game sounds.
+
+## Version: 11.0.18.alpha.80
+## Author: Leatrix
+## SavedVariables: LeaSoundsDB
+## AddonCompartmentFunc:LeaSoundsGlobalSlashFunc
+
+## IconTexture: Interface\HELPFRAME\HelpIcon-CharacterStuck
+
+## X-Curse-Project-ID: 304659
+
+Leatrix_Sounds_Locale.lua
+Leatrix_Sounds_Files.lua
+Leatrix_Sounds.lua

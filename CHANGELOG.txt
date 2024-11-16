@@ -1,0 +1,412 @@
+﻿11.0.16 - 6th November 2024
+- Updated sounds to game version 11.0.5.57388 (Oct 31 2024) (110005).
+
+11.0.15 - 30th October 2024
+- Updated sounds to game version 11.0.5.57292 (Oct 25 2024) (110005).
+
+11.0.14 - 23rd October 2024
+- Updated for game patch 11.0.5.
+- Updated sounds to game version 11.0.5.57171 (Oct 21 2024) (110005).
+
+11.0.12 - 9th October 2024
+- Holding shift or control to print or insert track details into chat will now temporarily disable keyboard input into the Leatrix Sounds panel to make copy and paste easier.  Clicking a track will enable keyboard input again.
+
+11.0.11 - 2nd October 2024
+- Updated sounds to game version 11.0.2.56819 (Sep 27 2024) (110002).
+
+11.0.10 - 25th September 2024
+- Updated sounds to game version 11.0.2.56647 (Sep 16 2024) (110002).
+
+11.0.09 - 18th September 2024
+- Updated sounds to game version 11.0.2.56625 (Sep 13 2024) (110002).
+
+11.0.08 - 11th September 2024
+- Updated sounds to game version 11.0.2.56513 (Sep 5 2024) (110002).
+
+11.0.07 - 4th September 2024
+- Updated sounds to game version 11.0.2.56421 (Aug 30 2024) (110002).
+
+11.0.06 - 28th August 2024
+- Updated sounds to game version 11.0.2.56313 (Aug 23 2024) (110002).
+
+11.0.05 - 21st August 2024
+- Updated sounds to game version 11.0.2.56196 (Aug 16 2024) (110002).
+
+11.0.04 - 14th August 2024
+- Updated for game patch 11.0.2.
+- Updated sounds to game version 11.0.2.56110 (Aug 12 2024) (110002).
+
+11.0.02 - 31st July 2024
+- Updated sounds to game version 11.0.0.55933 (Jul 30 2024) (110000).
+
+11.0.01 - 24th July 2024
+- Welcome to The War Within!
+- Updated sounds to game version 11.0.0.55818 (Jul 23 2024) (110000).
+
+10.2.41 - 6th July 2024
+- This is the last release that is compatible with both Dragonflight and The War Within.
+- Future releases will be for The War Within only.
+- Dragonflight: Updated sounds to game version 10.2.7.55261 (Jun 20 2024) (100207).
+- The War Within Beta: Updated sounds to game version 11.0.2.55399 (Jun 28 2024) (110002).
+- Republished due to an issue with CurseForge.
+
+10.2.30 - 5th June 2024
+- Updated sounds to game version 10.2.7.54988 (May 31 2024) (100207).
+
+10.2.28 - 22nd May 2024
+- Updated sounds to game version 10.2.7.54762 (May 16 2024) (100207).
+
+10.2.27 - 15th May 2024
+- Updated sounds to game version 10.2.7.54673 (May 10 2024) (100207).
+
+10.2.26 - 8th May 2024
+- Updated for game patch 10.2.7.
+- Updated sounds to game version 10.2.7.54604 (May 7 2024) (100207).
+- Added ability to toggle the main panel by clicking the slash command logo in the interface options panel.
+
+10.2.24 - 24th April 2024
+- Updated sounds to game version 10.2.6.54358 (Apr 19 2024) (100206).
+
+10.2.23 - 10th April 2024
+- Updated sounds to game version 10.2.6.54070 (Apr 2 2024) (100206).
+
+10.2.22 - 3rd April 2024
+- Updated sounds to game version 10.2.6.53989 (Mar 27 2024) (100206).
+
+10.2.20 - 20th March 2024
+- Updated for game patch 10.2.6.
+- Updated sounds to game version 10.2.6.53840 (Mar 18 2024) (100206).
+
+10.2.19 - 13th March 2024
+- Updated sounds to game version 10.2.5.53584 (Feb 29 2024) (100205).
+
+10.2.17 - 28th February 2024
+- Updated sounds to game version 10.2.5.53441 (Feb 20 2024) (100205).
+
+10.2.15 - 14th February 2024
+- Updated for ScrollFrameTemplate.
+
+10.2.11 - 24th January 2024
+- Updated sounds to game version 10.2.5.53040 (Jan 22 2024) (100205)
+
+10.2.10 - 16th January 2024
+- Preliminary update for game patch 10.2.5.
+- Updated sounds to game version 10.2.5.52902 (Jan 11 2024) (100205) (PTR).
+
+10.2.09 - 10th January 2024
+- Updated sounds to game version 10.2.5.52646 (PTR).
+
+10.2.06 - 20th December 2023
+- Updated sounds to game version 10.2.5.52554 (PTR).
+
+10.2.02 - 22nd November 2023
+- Fixed an issue which caused keypresses to be intercepted when a track wasn't playing.
+- Updated sounds to game version 10.2.0.52188 (Nov 14 2023) (100200).
+
+10.2.01 - 15th November 2023
+- Updated sounds to game version 10.2.0.52148 (Nov 10 2023) (100200).
+
+10.2.00 - 7th November 2023
+- Preliminary update for game patch 10.2.0.
+- Updated sounds to game version 10.2.0.52068 (Nov 6 2023) (100200).
+- Added Leatrix Sounds to the minimap addon compartment menu.
+- Fixed an issue which caused a Lua error when playing a track during combat.
+
+10.1.28 - 1st November 2023
+- Updated sounds to game version 10.1.7.51972 (Oct 30 2023) (100107).
+
+10.1.27 - 25th October 2023
+- Updated sounds to game version 10.1.7.51886 (Oct 23 2023) (100107).
+
+10.1.23 - 4th October 2023
+- Updated sounds to game version 10.1.7.51536 (Sep 26 2023) (100107).
+
+10.1.22 - 27th September 2023
+- Updated sounds to game version 10.1.7.51485 (Sep 21 2023) (100107).
+
+10.1.20 - 14th September 2023
+- Updated sounds to game version 10.1.7.51313 (Sep 11 2023) (100107).
+
+10.1.19 - 7th September 2023
+- Updated for game version 10.1.7.
+- Updated sounds to game version 10.1.7.51187 (Aug 31 2023) (100107).
+
+10.1.18 - 5th September 2023
+- Updated sounds to game version 10.1.5.51130 (Aug 28 2023) (100105).
+
+10.1.17 - 23rd August 2023
+- Updated sounds to game version 10.1.5.50791 (Aug 4 2023) (100105).
+
+10.1.15 - 8th August 2023
+- Updated sounds to game version 10.1.5.50747 (Aug 2 2023) (100105).
+
+10.1.13 - 26th July 2023
+- Updated sounds to game version 10.1.5.50585 (Jul 21 2023) (100105).
+
+10.1.12 - 18th July 2023
+- Updated sounds to game version 10.1.5.50469 (Jul 13 2023) (100105).
+
+10.1.10 - 12th July 2023
+- Updated for game version 10.1.5.
+- Updated sounds to game version 10.1.5.50401 (Jul 10 2023) (100105).
+
+10.1.07 - 19th June 2023
+- Updated sounds to game version 10.1.0.50000 (Jun 9 2023) (100100).
+
+10.1.06 - 11th June 2023
+- Updated sounds to game version 10.1.0.49890 (Jun 1 2023) (100100).
+
+10.1.05 - 4th June 2023
+- Updated sounds to game version 10.1.0.49801 (May 25 2023) (100100).
+
+10.1.02 - 10th May 2023
+- Updated sounds to game version 10.1.0.49474 (May 4 2023) (100100).
+
+10.1.01 - 3rd May 2023
+- Updated sounds to game version 10.1.0.49426.
+
+10.1.00 - 3rd May 2023
+- Updated for game version 10.1.
+- Added an icon for the in-game addon listing.
+
+10.0.52 - 23rd March 2023
+- Updated for game version 10.0.7.
+- Updated sounds to game version 10.0.7.48676 (Mar 20 2023) (100007).
+
+10.0.39 - 22nd February 2023
+- Updated sounds to game version 10.0.5.48069 (Feb 10 2023) (100005).
+
+10.0.38 - 4th February 2023
+- Updated sounds to game version 10.0.5.47967 (Feb 2 2023) (100005).
+
+10.0.35 - 1st February 2023
+- Updated sounds to game version 10.0.5.47884 (Jan 27 2023) (100005).
+- Updated close button code.
+
+10.0.34 - 27th January 2023
+- In order to ensure that Leatrix Sounds includes the latest sound files, the addon panel now includes an 'Unknown' checkbox.  If checked, unknown sound files will be shown in the listing.  These are typically newer sound files that do not have names yet.  Note that some unknown sound files may not be currently playable (this can change in future game patches).
+
+10.0.33 - 25th January 2023
+- Updated for game patch 10.0.5.
+- Updated sounds to game version 10.0.5.47799 (Jan 24 2023) (100005).
+- The /lts slash command has returned.  The /run leasounds() command is no longer available.
+
+10.0.27 - 4th January 2023
+- You can now hold control and left-click a track to insert the track ID in chat or right-click a track to insert the track ID in the chat editbox.  This makes it easier to add the track ID to the new 'Mute custom sounds' option ('System') in Leatrix Plus.
+- Additional sounds update for game version 10.0.2.47213 (Dec 19 2022) (100002).
+
+10.0.24 - 21st December 2022
+- Updated sounds to game version 10.0.2.47213 (Dec 19 2022) (100002).
+
+10.0.21 - 10th December 2022
+- Updated sounds to game version 10.0.2.46924.
+
+10.0.12 - 1st December 2022
+- Updated sounds to game version 10.0.2.46879.
+
+10.0.11 - 16th November 2022
+- Updated sounds to game version 10.0.2.46658.
+
+10.0.02 - 8th November 2022
+- Due to problems with Blizzard's code in Dragonflight, the '/lts' slash command has been removed for the time being.  As a workaround, you can enter '/run leasounds()' to open Leatrix Sounds.  If you want to pass a parameter, enter it in quotes between the brackets.  Example: /run leasounds("wipe").  This (hopefully temporary) change is necessary because of a bug in the game code with the slash command system.  Entering any addon related slash command will taint the UI and cause errors to show at some point.  Blizzard are aware of the bug.  When they fix it, the /lts slash command will return.  You can assign a hotkey to open Leatrix Sounds in the game keybindings panel if you prefer.
+
+10.0.01 - 27th October 2022
+- For the time being, the addon will not register with the minimap compartment menu.
+
+10.0.00 - 26th October 2022
+- Welcome to Dragonflight!
+- Updated the addon structure for Dragonflight.
+
+9.2.37 - 28th September 2022
+- Updated sounds to game version 10.0.2.45746 (Sep 22 2022) (100002).
+
+9.2.35 - 21st September 2022
+- Dragonflight: Leatrix Sounds is now listed in the minimap addon menu and the game options panel.
+- Dragonflight: Updates.
+- Updated sounds to game version 10.0.2.45632 (Sep 15 2022) (100002).
+
+9.2.34 - 14th September 2022
+- Updated sounds to game version 9.2.7.45338 (Aug 26 2022) (90207).
+
+9.2.28 - 8th September 2022
+- Updated for Dragonflight 10.0.2.45480 (PTR).
+
+9.2.27 - 7th September 2022
+- Updated for Dragonflight Beta.
+
+9.2.26 - 24th August 2022
+- Sound kits are no longer available in the addon.  They have not had filenames since Battle For Azeroth and they aren't required for what most people use Leatrix Sounds for which is to find sound files.
+- WoW.tools links are no longer supported.  The WoW.tools website is deprecated.
+
+9.2.25 - 17th August 2022
+- Updated for game version 9.2.7.
+- Updated sounds to game version 9.2.7.45114.
+
+9.2.23 - 3rd August 2022
+- Updated sounds to game version 9.2.5.44908.
+
+9.2.22 - 27th July 2022
+- Updated sounds to game version 9.2.5.44730.
+
+9.2.18 - 6th July 2022
+- Pressing W and S to traverse the listing will now show more tracks per page.
+- Updated sounds to game version 9.2.5.44325.
+
+9.2.17 - 29th June 2022
+- Updated sounds to game version 9.2.5.44061.
+
+9.2.16 - 22nd June 2022
+- In the game key bindings menu, you can now set a keybind to toggle Leatrix Sounds.
+- Updated sounds to game version 9.2.5.44061.
+
+9.2.14 - 8th June 2022
+- Updated sounds to game version 9.2.5.44061.
+
+9.2.13 - 1st June 2022
+- Updated for game version 9.2.5.
+- Updated sounds to game version 9.2.5.43971.
+
+9.2.10 - 12th May 2022
+- Updated sounds to game version 9.2.0.43345.
+
+9.2.08 - 27th April 2022
+- Updated sounds to game version 9.2.0.43340.
+
+9.2.07 - 20th April 2022
+- Updated sounds to game version 9.2.0.43206.
+
+9.2.06 - 13th April 2022
+- Updated sounds to game version 9.2.0.43114.
+
+9.2.04 - 30th March 2022
+- Updated sounds to game version 9.2.0.42979.
+
+9.2.03 - 23rd March 2022
+- Updated sounds to game version 9.2.0.42698.
+
+9.2.02 - 9th March 2022
+- Updated sounds to game version 9.2.0.42614.
+
+9.2.01 - 2nd March 2022
+- Updated sounds to game version 9.2.0.42538.
+
+9.2.00 - 23rd February 2022
+- Updated for game version 9.2.0.
+- Updated sounds to game version 9.2.0.42423.
+
+9.1.41 - 28th January 2022
+- Uploaded again to address CurseForge issue.
+
+9.1.40 - 26th January 2022
+- Updated sounds to game version 9.1.5.42010.
+
+9.1.38 - 13th January 2022
+- Updated sounds to game version 9.1.5.41793.
+
+9.1.31 - 16th December 2021
+- Updated sounds to game version 9.1.5.41488.
+
+9.1.28 - 8th December 2021
+- Updated sounds to game version 9.1.5.41359.
+
+9.1.24 - 24th November 2021
+- Updated sounds to game version 9.1.5.41079.
+
+9.1.23 - 17th November 2021
+- Updated sounds to game version 9.1.5.41031.
+
+9.1.22 - 10th November 2021
+- Updated sounds to game version 9.1.5.40966.
+
+9.1.21 - 30th October 2021
+- Updated for game version 9.1.5.
+- Updated sounds to game version 9.1.5.40871.
+
+9.1.20 - 29th October 2021
+- Replaced packager to fix CurseForge App issue.
+
+9.1.18 - 28th October 2021
+- Updated sounds to game version 9.1.0.40725.
+
+9.1.16 - 21st October 2021
+- Updated sounds to game version 9.1.0.40593.
+
+9.1.13 - 13th October 2021
+- Updated sounds to game version 9.1.0.40443.
+
+9.1.10 - 16th September 2021
+- Updated sounds to game version 9.1.0.40120.
+
+9.1.06 - 22nd August 2021
+- Updated sounds to game version 9.1.0.39804.
+
+9.1.04 - 5th August 2021
+- Updated sounds to game version 9.1.0.39653.
+
+9.1.03 = 22nd July 2021
+- Updated sounds to game version 9.1.0.39427.
+
+9.1.02 - 13th July 2021
+- Updated sounds to game version 9.1.0.39335.
+
+9.1.01 - 7th July 2021
+- Updated sounds to game version 9.1.0.39318.
+
+9.1.00 - 30th June 2021
+- Updated for game version 9.1.
+- Updated sounds to game version 9.1.0.39226.
+
+9.0.28 - 13th May 2021
+- Updated sounds to game version 9.0.5.38556.
+
+9.0.27 - 4th May 2021
+- Added a niche ability to search Leatrix_Sounds_Files.lua or Leatrix_Sounds_Kits.lua for multiple sound file IDs or sound kit IDs using Notepad++.  To use it, hold control, shift and right-click a few sound files or sound kits in LTS (one or the other, not both).  You will get a search pattern in the chat editbox that you can paste into a Notepad++ regular expression search (use Search > Mark with Bookmark line checked so that you can do Search > Bookmark > Copy Bookmarked Lines afterwards).
+
+9.0.25 - 21st April 2021
+- If dialog sound is disabled, it will now only be enabled if you play a sound kit.  Playing a sound file will no longer enable dialog sound if it's disabled.
+- The source file versions (ListFile, SoundKit, SoundKitName) are now shown in the help button tooltip.
+
+9.0.22 - 1st April 2021
+- Updated sounds to game version 9.0.5.38134.
+
+9.0.21 - 25th March 2021
+- Updated sounds to game version 9.0.5.37988.
+
+9.0.20 - 17th March 2021
+- Updated sounds to game version 9.0.5.37899.
+
+9.0.19 - 10th March 2021
+- Updated for World of Warcraft 9.0.5.
+- Updated sounds to game version 9.0.5.37864.
+
+9.0.15 - 9th February 2021
+- Updated sounds to game version 9.0.2.37474.
+
+9.0.14 - 22nd January 2021
+- Updated sounds to game version 9.0.2.37176.
+
+9.0.13 - 6th January 2021
+- Updated sounds to game version 9.0.2.36949.
+
+9.0.12 - 18th December 2020
+- Updated sounds to game version 9.0.2.36839.
+
+9.0.11 - 9th December 2020
+- Source code is now on GitHub (github.com/leatrix).
+
+9.0.08 - 18th November 2020
+- Updated for World of Warcraft 9.0.2.
+- Updated sounds to game version 9.0.2.36665.
+
+9.0.06 - 11th November 2020
+- Updated sounds to game version 9.0.1.36492.
+
+9.0.05 - 4th November 2020
+- The hotkey for replacing the currently selected track is now "E" (was SPACE) and the hotkey for stopping playback is now "Q" (was LCTRL).
+- When the chat editbox is activated (for instance when you shift/right-click a track), all hotkeys will be disabled until the chat editbox is deactivated.
+
+9.0.01 - 28th October 2020
+- Updated sounds to game version 9.0.1.36372.
+
+9.0.00 - 12th October 2020
+- Updated for World of Warcraft patch 9.0 (Shadowlands).
