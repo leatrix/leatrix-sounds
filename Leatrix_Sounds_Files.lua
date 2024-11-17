@@ -1,6 +1,6 @@
 
 	----------------------------------------------------------------------
-	-- Leatrix Sounds Sound File Listing for new branch
+	-- Leatrix Sounds Sound File Listing
 	----------------------------------------------------------------------
 
 	local void, Leatrix_Sounds = ...
