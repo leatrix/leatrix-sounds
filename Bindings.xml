@@ -1,7 +1,7 @@
 ﻿<Bindings>
 
 	<!-- Toggle panel -->
-	<Binding name="LEATRIX_SOUNDS_GLOBAL_TOGGLE" category = "Leatrix Sounds222">
+	<Binding name="LEATRIX_SOUNDS_GLOBAL_TOGGLE" category = "Leatrix Sounds">
 		SlashCmdList["Leatrix_Sounds"]("")
 	</Binding>
 
