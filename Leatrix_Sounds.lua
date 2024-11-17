@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 11.0.18.alpha.81 (16th November 2024)
+	-- Leatrix Sounds 1.15.59 (13th November 2024)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB = {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "11.0.18.alpha.81"
+	LeaSoundsLC["AddonVer"] = "1.15.59"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -19,24 +19,20 @@
 	-- Check Wow version is valid
 	do
 		local gameversion, gamebuild, gamedate, gametocversion = GetBuildInfo()
-		if gametocversion and gametocversion < 0 then -- 110000
-			-- Game client is Wow Classic
+		if gametocversion and gametocversion > 19999 then
+			-- Game client is not Wow Classic
 			C_Timer.After(2, function()
-				print(L["LEATRIX SOUNDS: THIS IS FOR THE WAR WITHIN ONLY!"])
+				print(L["LEATRIX SOUNDS: WRONG VERSION INSTALLED!"])
 			end)
 			return
+		end
+		if gametocversion and gametocversion == 11504 then
+			LeaSoundsLC.NewPatch = true
 		end
 	end
 
 	-- Set bindings translations
 	_G.BINDING_NAME_LEATRIX_SOUNDS_GLOBAL_TOGGLE = L["Toggle panel"]
-
-	-- if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then LeaSoundsLC.GameVersion = L["The War Within"]
-	-- elseif WOW_PROJECT_ID == WOW_PROJECT_CATACLYSM_CLASSIC then LeaSoundsLC.GameVersion = L["Cataclysm"]
-	-- elseif WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then LeaSoundsLC.GameVersion = L["Classic Era"]
-	-- end
-
-	-- LeaSoundsLC["AddonVer"] = LeaSoundsLC["AddonVer"] .. " (" .. LeaSoundsLC.GameVersion .. ")"
 
 	----------------------------------------------------------------------
 	--	L00: Leatrix Sounds
@@ -52,18 +48,6 @@
 	-- Print text
 	function LeaSoundsLC:Print(text)
 		DEFAULT_CHAT_FRAME:AddMessage(L[text], 1.0, 0.85, 0.0)
-	end
-
-	-- Create a close button without using a template
-	function LeaSoundsLC:CreateCloseButton(parent, w, h, anchor, x, y)
-		local btn = CreateFrame("BUTTON", nil, parent)
-		btn:SetSize(w, h)
-		btn:SetPoint(anchor, x, y)
-		btn:SetNormalTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Up")
-		btn:SetHighlightTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Highlight")
-		btn:SetPushedTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Down")
-		btn:SetDisabledTexture("Interface\\Buttons\\UI-Panel-MinimizeButton-Disabled")
-		return btn
 	end
 
 	-- Load a numeric variable and set it to default if it's not within a given range
@@ -304,8 +288,9 @@
 		PageF.footTex:SetVertexColor(0.5, 0.5, 0.5, 1.0)
 
 		-- Add close Button
-		PageF.cb = LeaSoundsLC:CreateCloseButton(PageF, 30, 30, "TOPRIGHT", 0, 0)
-		PageF.cb:SetScript("OnClick", function() PageF:Hide() end)
+		PageF.cb = CreateFrame("Button", nil, PageF, "UIPanelCloseButton")
+		PageF.cb:SetSize(30, 30)
+		PageF.cb:SetPoint("TOPRIGHT", 0, 0)
 
 		-- Set panel position when shown
 		PageF:SetScript("OnShow", function()
@@ -780,7 +765,7 @@
 		PageF:EnableKeyboard(true)
 		PageF:SetScript("OnKeyUp", function(self, key)
 
-			-- Do nothing if CTRL,SHIFT or ALT is down
+			-- Do nothing if CTRL, SHIFT or ALT is down
 			if IsModifierKeyDown() then return end
 
 			-- Close addon panel key
@@ -908,7 +893,6 @@
 	-- Slash command function
 	local function SlashFunc(str)
 		local str = string.lower(str)
-		if str and str == "leatrix_sounds" then str = "" end -- Compartment menu
 		if str and str ~= "" then
 			-- Traverse parameters
 			if str == "ver" then
@@ -938,6 +922,8 @@
 				return
 			end
 		else
+			-- Prevent panel from showing if the chat configuration panel is showing
+			if ChatConfigFrame:IsShown() then return end
 			-- Prevent panel from showing if Blizzard Store is showing
 			if StoreFrame and StoreFrame:GetAttribute("isshown") then return end
 			-- Toggle the main panel
@@ -956,10 +942,10 @@
 	SlashCmdList["Leatrix_Sounds"] = function(self)
 		-- Run slash command function
 		SlashFunc(self)
+		-- Redirect tainted variables
+		RunScript('ACTIVE_CHAT_EDIT_BOX = ACTIVE_CHAT_EDIT_BOX')
+		RunScript('LAST_ACTIVE_CHAT_EDIT_BOX = LAST_ACTIVE_CHAT_EDIT_BOX')
 	end
-
-	-- Add to compartment menu
-	_G.LeaSoundsGlobalSlashFunc = SlashFunc
 
 	----------------------------------------------------------------------
 	-- Create panel in game options panel
@@ -975,7 +961,7 @@
 		maintitle:ClearAllPoints()
 		maintitle:SetPoint("TOP", 0, -72)
 
-		local expTitle = LeaSoundsLC:MakeTx(interPanel, "Shadowlands", 0, 0)
+		local expTitle = LeaSoundsLC:MakeTx(interPanel, "World of Warcraft Classic", 0, 0)
 		expTitle:SetFont(expTitle:GetFont(), 32)
 		expTitle:ClearAllPoints()
 		expTitle:SetPoint("TOP", 0, -152)
@@ -1008,8 +994,6 @@
 		pTex:SetAlpha(0.2)
 		pTex:SetTexCoord(0, 1, 1, 0)
 
-		-- Causes block taint in 10.0.2 (open options panel keybindings page then close)
-		expTitle:SetText(L["The War Within"])
 		local category = Settings.RegisterCanvasLayoutCategory(interPanel, "Leatrix Sounds")
 		Settings.RegisterAddOnCategory(category)
 
