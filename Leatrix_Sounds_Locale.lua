@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- Leatrix Sounds Locale
+-- Leatrix Sounds Locale for new branch
 ----------------------------------------------------------------------
 
 -- Create locale structure
