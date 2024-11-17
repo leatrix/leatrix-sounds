@@ -1,6 +1,6 @@
 
 	----------------------------------------------------------------------
-	-- Leatrix Sounds Sound File Listing
+	-- Leatrix Sounds Sound File Listing new
 	----------------------------------------------------------------------
 
 	local void, Leatrix_Sounds = ...

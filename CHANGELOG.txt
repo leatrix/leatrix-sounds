@@ -1,4 +1,6 @@
-﻿1.15.57 - 30th October 2024
+﻿1.15.60.alpha.1 - 17th November 2024
+
+1.15.57 - 30th October 2024
 - Sounds updated to game version 1.15.4.57134 (Oct 17 2024) (11504).
 
 1.15.54 - 9th October 2024
