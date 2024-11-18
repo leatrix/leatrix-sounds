@@ -3,13 +3,13 @@ name: Update Changelog Pages for Each Branch
 on:
   push:
     branches:
-      - mainline    # Main branch
-      - classic     # Classic branch
-      - vanilla     # Vanilla branch
+      - mainline
+      - classic
+      - vanilla
 
 permissions:
-  contents: write    # Required to push changes to the GitHub Pages branch
-  id-token: write    # Required for deploy-pages authentication
+  contents: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -27,5 +27,23 @@ jobs:
         mkdir -p ./public/${GITHUB_REF_NAME}-changelog
         cp CHANGELOG.txt ./public/${GITHUB_REF_NAME}-changelog/index.md
 
+    # Step 1: Debugging step to confirm the public folder creation
+    - name: Debug: List Files in Workspace
+      run: |
+        echo "Current directory contents:"
+        ls -R
+        echo "Contents of the public directory:"
+        ls -R ./public || echo "Public directory not found!"
+
+    # Upload the public directory as an artifact for deployment
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: pages-artifact    # Matches deploy-pages artifact-name
+        path: ./public/         # Ensure this is the correct path
+        retention-days: 1       # Optional, short retention for deployment
+
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
+      with:
+        artifact-name: pages-artifact  # Must match the uploaded artifact name
