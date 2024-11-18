@@ -21,7 +21,7 @@ jobs:
     - name: Copy Branch Changelog
       run: |
         mkdir -p ./public/${GITHUB_REF_NAME}-changelog
-        cp CHANGELOG.md ./public/${GITHUB_REF_NAME}-changelog/index.md
+        cp CHANGELOG.txt ./public/${GITHUB_REF_NAME}-changelog/index.md
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
