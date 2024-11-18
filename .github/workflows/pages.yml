@@ -1,0 +1,27 @@
+name: Update Changelog Pages for Each Branch
+
+on:
+  push:
+    branches:
+      - mainline    # Main branch
+      - classic     # Classic branch
+      - vanilla     # Vanilla branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Pages
+      uses: actions/configure-pages@v3
+
+    - name: Copy Branch Changelog
+      run: |
+        mkdir -p ./public/${GITHUB_REF_NAME}-changelog
+        cp CHANGELOG.md ./public/${GITHUB_REF_NAME}-changelog/index.md
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v2
