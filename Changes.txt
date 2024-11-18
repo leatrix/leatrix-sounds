@@ -1,0 +1,3 @@
+﻿Leatrix Sounds (classic)
+
+For the change log, click [here](https://github.com/leatrix/leatrix-sounds/blob/classic/Changelog.txt).
