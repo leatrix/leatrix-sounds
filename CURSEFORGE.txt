@@ -1,3 +1,0 @@
-﻿Leatrix Sounds (mainline)
-
-For the change log, click [here](https://raw.githubusercontent.com/leatrix/leatrix-sounds/refs/heads/mainline/CHANGELOG.txt).

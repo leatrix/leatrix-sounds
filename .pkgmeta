@@ -2,9 +2,8 @@ package-as: Leatrix_Sounds
 enable-nolib-creation: no
 
 manual-changelog:
-    filename: CHANGELOG.txt
+    filename: CurseForge.txt
     markup-type: plain
 
 ignore:
     - CHANGES.txt
-    - CHANGELOG.txt
