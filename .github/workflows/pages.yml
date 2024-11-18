@@ -7,6 +7,10 @@ on:
       - classic     # Classic branch
       - vanilla     # Vanilla branch
 
+permissions:
+  contents: write    # Required to push changes to the GitHub Pages branch
+  id-token: write    # Required for deploy-pages authentication
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
