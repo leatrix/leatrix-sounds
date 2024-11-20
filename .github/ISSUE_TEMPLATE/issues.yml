@@ -6,14 +6,11 @@ body:
     attributes:
       label: "Game Version"
       options:
-        - "Choose a game version"
         - "The War Within"
         - "Cataclysm Classic"
         - "Classic Era (including Hardcore and Season of Discovery)"
     validations:
       required: true
-      excludes:
-        - "Choose a game version"
 
   - type: textarea
     id: issue
