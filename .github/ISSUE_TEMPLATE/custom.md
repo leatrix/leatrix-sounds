@@ -1,0 +1,30 @@
+---
+name: Custom issue template
+about: Issue template
+title: ''
+labels: ''
+assignees: leatrix
+
+---
+
+name: Issue
+description: Raise an issue about anything.
+body:
+  - type: dropdown
+    id: game_version
+    attributes:
+      label: "Game Version"
+      options:
+        - "The War Within"
+        - "Cataclysm Classic"
+        - "Classic Era (including Hardcore and Season of Discovery)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: "Issue"
+      placeholder: "Enter the issue details here."
+    validations:
+      required: true
