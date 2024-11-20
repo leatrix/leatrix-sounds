@@ -1,16 +1,19 @@
 name: Leatrix Sounds Issue Tracker
-description: File a bug report, suggest a feature or simply say anything you like.
+description: Use this form to File a bug report, suggest a feature or to say anything you like.
 body:
   - type: dropdown
     id: game_version
     attributes:
       label: "Game Version"
       options:
+        - "Choose a game version"
         - "The War Within"
         - "Cataclysm Classic"
         - "Classic Era (including Hardcore and Season of Discovery)"
     validations:
       required: true
+      excludes: # Exclude the placeholder option
+        - "Choose a game version"
 
   - type: textarea
     id: issue
