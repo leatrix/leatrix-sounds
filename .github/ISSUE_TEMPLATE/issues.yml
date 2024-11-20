@@ -1,6 +1,14 @@
 name: Leatrix Sounds Issue Tracker
 description: Use this form to File a bug report, suggest a feature or to say anything you like.
 body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: "Issue"
+      placeholder: "Enter the issue details here."
+    validations:
+      required: true
+
   - type: dropdown
     id: game_version
     attributes:
@@ -11,11 +19,4 @@ body:
         - "Classic Era (including Hardcore and Season of Discovery)"
     validations:
       required: true
-
-  - type: textarea
-    id: issue
-    attributes:
-      label: "Issue"
-      placeholder: "Enter the issue details here."
-    validations:
-      required: true
+      
