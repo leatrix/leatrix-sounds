@@ -12,7 +12,7 @@ body:
         - "Classic Era (including Hardcore and Season of Discovery)"
     validations:
       required: true
-      excludes: # Exclude the placeholder option
+      excludes:
         - "Choose a game version"
 
   - type: textarea
