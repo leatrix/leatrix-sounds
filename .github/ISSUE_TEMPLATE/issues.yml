@@ -1,5 +1,5 @@
-name: Leatrix Sounds
-description: File a bug report, suggest a feature, say anything you like.
+name: Leatrix Sounds Issue Tracker
+description: File a bug report, suggest a feature or simply say anything you like.
 body:
   - type: dropdown
     id: game_version
