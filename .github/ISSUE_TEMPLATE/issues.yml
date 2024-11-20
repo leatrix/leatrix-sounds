@@ -12,7 +12,7 @@ body:
   - type: dropdown
     id: game_version
     attributes:
-      label: "Game Version"
+      label: "Game version"
       options:
         - "Choose a game version"
         - "The War Within"
