@@ -1,5 +1,5 @@
 name: Leatrix Sounds Issue Tracker
-description: Use this form to File a bug report, suggest a feature or to say anything you like.
+description: Use this form to file a bug report, suggest a feature or to say anything you like about Leatrix Sounds.
 body:
   - type: textarea
     id: issue
