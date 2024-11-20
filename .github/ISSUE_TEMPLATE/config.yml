@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: File an Issue
+    url: https://github.com/leatrix/leatrix-sounds/issues/new?template=leatrix-sounds-issue-tracker.yml
+    about: Use this form to file an issue for Leatrix Sounds.
