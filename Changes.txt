@@ -1,1 +1,5 @@
-﻿For the change log, click [here](https://github.com/leatrix/leatrix-sounds/raw/retail/Changelog.txt).
+﻿Change Logs:
+
+[War Within](https://github.com/leatrix/leatrix-sounds/raw/retail/Changelog.txt),
+[Cataclysm Classic](https://github.com/leatrix/leatrix-sounds/raw/cataclysm/Changelog.txt),
+[Classic Era](https://github.com/leatrix/leatrix-sounds/raw/classic/Changelog.txt).
