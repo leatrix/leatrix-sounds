@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 1.15.66 (12th December 2024)
+	-- Leatrix Sounds 1.15.67.alpha.1 (12th December 2024)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB = {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "1.15.66"
+	LeaSoundsLC["AddonVer"] = "1.15.67.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -135,10 +135,10 @@
 	end
 
 	-- Create a button
-	function LeaSoundsLC:CreateButton(name, frame, label, anchor, x, y, height, tip)
+	function LeaSoundsLC:CreateButton(name, frame, label, anchor, x, y, width, height, tip)
 		local mbtn = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
 		LeaSoundsCB[name] = mbtn
-		mbtn:SetHeight(height)
+		mbtn:SetSize(width, height)
 		mbtn:SetPoint(anchor, x, y)
 		mbtn:SetHitRectInsets(0, 0, 0, 0)
 		mbtn:SetText(L[label])
@@ -153,7 +153,18 @@
 		-- Create fontstring and set button width based on it
 		mbtn.f = mbtn:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
 		mbtn.f:SetText(L[label])
-		mbtn:SetWidth(mbtn.f:GetStringWidth() + 20)
+		if width > 0 then
+			-- Button should have static width
+			mbtn:SetWidth(width)
+			local buttonText = mbtn:GetFontString()
+			buttonText:SetWidth(width - 10)
+			buttonText:SetNonSpaceWrap(false)
+			buttonText:SetWordWrap(false)
+			buttonText:SetJustifyH("CENTER")
+		else
+			-- Button should have variable width
+			mbtn:SetWidth(mbtn.f:GetStringWidth() + 20)
+		end
 
 		-- Set skinned button textures
 		mbtn:SetNormalTexture("Interface\\AddOns\\Leatrix_Sounds\\Leatrix_Sounds.blp")
@@ -299,7 +310,7 @@
 		end)
 
 		-- Create help button
-		local helpBtn = LeaSoundsLC:CreateButton("HelpButton", LeaSoundsLC["PageF"], "Help", "BOTTOMRIGHT", -10, 10, 25, "Searches can consist of up to 10 keywords.  Keywords prefixed with ! are excluded from search results.|n|nWhile a track is selected, you can press W and S to play the previous and next track, E to replay the currently selected track or Q to stop playback.|n|nHold SHIFT and click to print (left-click) or insert (right-click) the selected track details in chat.|n|nHold CONTROL and click to print (left-click) or insert (right-click) the selected track ID in chat.")
+		local helpBtn = LeaSoundsLC:CreateButton("HelpButton", LeaSoundsLC["PageF"], "Help", "BOTTOMRIGHT", -10, 10, 40, 25, "Searches can consist of up to 10 keywords.  Keywords prefixed with ! are excluded from search results.|n|nWhile a track is selected, you can press W and S to play the previous and next track, E to replay the currently selected track or Q to stop playback.|n|nHold SHIFT and click to print (left-click) or insert (right-click) the selected track details in chat.|n|nHold CONTROL and click to print (left-click) or insert (right-click) the selected track ID in chat.")
 		helpBtn:SetPushedTextOffset(0, 0)
 
 		-- Create checkboxes
@@ -389,7 +400,7 @@
 		LeaSoundsLC.scrollFrame = scrollFrame
 
 		-- Add stop button
-		local stopBtn = LeaSoundsLC:CreateButton("StopPlaybackButton", LeaSoundsLC["PageF"], "Stop", "BOTTOMRIGHT", -16, 12, 25)
+		local stopBtn = LeaSoundsLC:CreateButton("StopPlaybackButton", LeaSoundsLC["PageF"], "Stop", "BOTTOMRIGHT", -16, 12, 40, 25)
 		stopBtn:Hide(); stopBtn:Show()
 		LeaSoundsLC:LockItem(stopBtn, true)
 		stopBtn:SetScript("OnClick", function()
