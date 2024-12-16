@@ -212,7 +212,7 @@
 
 		-- Set maximum label width
 		if Cbox.f:GetWidth() > 60 then
-			Cbox.f:SetWidth(60)
+			Cbox.f:SetWidth(60 - 10)
 		end
 
 		-- Set checkbox click width
@@ -315,14 +315,14 @@
 
 		-- Create checkboxes
 		LeaSoundsLC:MakeCB("SoundMusic", "Music", 416, -276, "If checked, music will be shown in the listing.")
-		LeaSoundsLC:MakeCB("SoundSFX", "SFX", 486, -276, "If checked, sound effects will be shown in the listing.")
+		LeaSoundsLC:MakeCB("SoundSFX", "Effects", 486, -276, "If checked, sound effects will be shown in the listing.")
 		LeaSoundsLC:MakeCB("SoundUnknown", "Unknown", 486, -276, "If checked, unknown sound files will be shown in the listing.|n|nThese are typically newer sound files which do not have names yet.|n|nNote that some unknown sound files may not be currently playable.")
 
 		-- Position checkboxes
 		LeaSoundsCB["SoundUnknown"]:ClearAllPoints()
 		LeaSoundsCB["SoundUnknown"]:SetPoint("RIGHT", LeaSoundsCB["HelpButton"], "LEFT", -76, 0)
 		LeaSoundsCB["SoundSFX"]:ClearAllPoints()
-		LeaSoundsCB["SoundSFX"]:SetPoint("RIGHT", LeaSoundsCB["SoundUnknown"], "LEFT", -35, 0)
+		LeaSoundsCB["SoundSFX"]:SetPoint("RIGHT", LeaSoundsCB["SoundUnknown"], "LEFT", -50, 0)
 		LeaSoundsCB["SoundMusic"]:ClearAllPoints()
 		LeaSoundsCB["SoundMusic"]:SetPoint("RIGHT", LeaSoundsCB["SoundSFX"], "LEFT", -50, 0)
 
@@ -423,14 +423,8 @@
 		end)
 
 		-- Create editbox for search
-		local searchLabel = LeaSoundsLC:MakeTx(LeaSoundsLC["PageF"], "Search", 16, -278)
-		searchLabel:ClearAllPoints()
-		searchLabel:SetPoint("BOTTOMLEFT", 16, 17)
-
-		local sBox = LeaSoundsLC:CreateEditBox("SearchBox", LeaSoundsLC["PageF"], 354, 100, "TOPLEFT", 101, -272)
+		local sBox = LeaSoundsLC:CreateEditBox("SearchBox", LeaSoundsLC["PageF"], 410, 100, "TOPLEFT", 16, -272)
 		LeaSoundsCB["sBox"] = sBox
-		sBox:ClearAllPoints()
-		sBox:SetPoint("LEFT", searchLabel, "RIGHT", 16, 0)
 
 		-- Reposition stop button so its next to the search box
 		stopBtn:ClearAllPoints()
