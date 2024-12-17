@@ -1,6 +1,6 @@
 ﻿
 	----------------------------------------------------------------------
-	-- Leatrix Sounds 4.0.38 (12th December 2024)
+	-- Leatrix Sounds 4.0.39.alpha.1 (12th December 2024)
 	----------------------------------------------------------------------
 
 	--  Create global table
@@ -10,7 +10,7 @@
 	local LeaSoundsLC, LeaSoundsCB = {}, {}
 
 	-- Version
-	LeaSoundsLC["AddonVer"] = "4.0.38"
+	LeaSoundsLC["AddonVer"] = "4.0.39.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Sounds = ...
@@ -135,10 +135,10 @@
 	end
 
 	-- Create a button
-	function LeaSoundsLC:CreateButton(name, frame, label, anchor, x, y, height, tip)
+	function LeaSoundsLC:CreateButton(name, frame, label, anchor, x, y, width, height, tip)
 		local mbtn = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
 		LeaSoundsCB[name] = mbtn
-		mbtn:SetHeight(height)
+		mbtn:SetSize(width, height)
 		mbtn:SetPoint(anchor, x, y)
 		mbtn:SetHitRectInsets(0, 0, 0, 0)
 		mbtn:SetText(L[label])
@@ -153,7 +153,18 @@
 		-- Create fontstring and set button width based on it
 		mbtn.f = mbtn:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
 		mbtn.f:SetText(L[label])
-		mbtn:SetWidth(mbtn.f:GetStringWidth() + 20)
+		if width > 0 then
+			-- Button should have static width
+			mbtn:SetWidth(width)
+			local buttonText = mbtn:GetFontString()
+			buttonText:SetWidth(width - 10)
+			buttonText:SetNonSpaceWrap(false)
+			buttonText:SetWordWrap(false)
+			buttonText:SetJustifyH("CENTER")
+		else
+			-- Button should have variable width
+			mbtn:SetWidth(mbtn.f:GetStringWidth() + 20)
+		end
 
 		-- Set skinned button textures
 		mbtn:SetNormalTexture("Interface\\AddOns\\Leatrix_Sounds\\Leatrix_Sounds.blp")
@@ -201,7 +212,7 @@
 
 		-- Set maximum label width
 		if Cbox.f:GetWidth() > 60 then
-			Cbox.f:SetWidth(60)
+			Cbox.f:SetWidth(60 - 10)
 		end
 
 		-- Set checkbox click width
@@ -299,19 +310,19 @@
 		end)
 
 		-- Create help button
-		local helpBtn = LeaSoundsLC:CreateButton("HelpButton", LeaSoundsLC["PageF"], "Help", "BOTTOMRIGHT", -10, 10, 25, "Searches can consist of up to 10 keywords.  Keywords prefixed with ! are excluded from search results.|n|nWhile a track is selected, you can press W and S to play the previous and next track, E to replay the currently selected track or Q to stop playback.|n|nHold SHIFT and click to print (left-click) or insert (right-click) the selected track details in chat.|n|nHold CONTROL and click to print (left-click) or insert (right-click) the selected track ID in chat.")
+		local helpBtn = LeaSoundsLC:CreateButton("HelpButton", LeaSoundsLC["PageF"], "Help", "BOTTOMRIGHT", -10, 10, 40, 25, "Searches can consist of up to 10 keywords.  Keywords prefixed with ! are excluded from search results.|n|nWhile a track is selected, you can press W and S to play the previous and next track, E to replay the currently selected track or Q to stop playback.|n|nHold SHIFT and click to print (left-click) or insert (right-click) the selected track details in chat.|n|nHold CONTROL and click to print (left-click) or insert (right-click) the selected track ID in chat.")
 		helpBtn:SetPushedTextOffset(0, 0)
 
 		-- Create checkboxes
 		LeaSoundsLC:MakeCB("SoundMusic", "Music", 416, -276, "If checked, music will be shown in the listing.")
-		LeaSoundsLC:MakeCB("SoundSFX", "SFX", 486, -276, "If checked, sound effects will be shown in the listing.")
+		LeaSoundsLC:MakeCB("SoundSFX", "Effects", 486, -276, "If checked, sound effects will be shown in the listing.")
 		LeaSoundsLC:MakeCB("SoundUnknown", "Unknown", 486, -276, "If checked, unknown sound files will be shown in the listing.|n|nThese are typically newer sound files which do not have names yet.|n|nNote that some unknown sound files may not be currently playable.")
 
 		-- Position checkboxes
 		LeaSoundsCB["SoundUnknown"]:ClearAllPoints()
 		LeaSoundsCB["SoundUnknown"]:SetPoint("RIGHT", LeaSoundsCB["HelpButton"], "LEFT", -76, 0)
 		LeaSoundsCB["SoundSFX"]:ClearAllPoints()
-		LeaSoundsCB["SoundSFX"]:SetPoint("RIGHT", LeaSoundsCB["SoundUnknown"], "LEFT", -35, 0)
+		LeaSoundsCB["SoundSFX"]:SetPoint("RIGHT", LeaSoundsCB["SoundUnknown"], "LEFT", -50, 0)
 		LeaSoundsCB["SoundMusic"]:ClearAllPoints()
 		LeaSoundsCB["SoundMusic"]:SetPoint("RIGHT", LeaSoundsCB["SoundSFX"], "LEFT", -50, 0)
 
@@ -389,7 +400,7 @@
 		LeaSoundsLC.scrollFrame = scrollFrame
 
 		-- Add stop button
-		local stopBtn = LeaSoundsLC:CreateButton("StopPlaybackButton", LeaSoundsLC["PageF"], "Stop", "BOTTOMRIGHT", -16, 12, 25)
+		local stopBtn = LeaSoundsLC:CreateButton("StopPlaybackButton", LeaSoundsLC["PageF"], "Stop", "BOTTOMRIGHT", -16, 12, 40, 25)
 		stopBtn:Hide(); stopBtn:Show()
 		LeaSoundsLC:LockItem(stopBtn, true)
 		stopBtn:SetScript("OnClick", function()
@@ -412,14 +423,8 @@
 		end)
 
 		-- Create editbox for search
-		local searchLabel = LeaSoundsLC:MakeTx(LeaSoundsLC["PageF"], "Search", 16, -278)
-		searchLabel:ClearAllPoints()
-		searchLabel:SetPoint("BOTTOMLEFT", 16, 17)
-
-		local sBox = LeaSoundsLC:CreateEditBox("SearchBox", LeaSoundsLC["PageF"], 354, 100, "TOPLEFT", 101, -272)
+		local sBox = LeaSoundsLC:CreateEditBox("SearchBox", LeaSoundsLC["PageF"], 410, 100, "TOPLEFT", 16, -272)
 		LeaSoundsCB["sBox"] = sBox
-		sBox:ClearAllPoints()
-		sBox:SetPoint("LEFT", searchLabel, "RIGHT", 16, 0)
 
 		-- Reposition stop button so its next to the search box
 		stopBtn:ClearAllPoints()
